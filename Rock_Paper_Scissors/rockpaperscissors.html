@@ -3,56 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock, Paper, Scissors</title>
-    <script>
-
-        playGame = function(input){
-
-            // initialize variables
-            var result;
-            // generate NPC input
-            var npcChoice = Math.random();
-
-            if (npcChoice < 0.34) npcChoice = "rock";
-            else if (npcChoice <= 0.67) npcChoice = "paper";
-            else npcChoice = "scissors";
-
-            // compare and get results
-            // tie
-            if (input === npcChoice) result = "tie";
-
-            // user chooses rock
-            else if (input === "rock")
-                if (npcChoice === "paper") result = "lose";
-                else if (npcChoice === "scissors") result = "win";
-
-            // user chooses paper
-            else if (input === "paper")
-                if (npcChoice === "scissors") result = "lose";
-                else if (npcChoice === "rock") result = "win";
-
-            // user chooses scissors
-            else if (input === "scissors");
-                if (npcChoice === "rock" ) result = "lose";
-                else if (npcChoice === "paper") result = "win";
-
-            // output results
-            alert("You chose " + input + ", and the computer chose " + npcChoice + ". You " + result + "." );
-        }
-
-
-    </script>
 </head>
 <body>
     <h1>Rock, Paper, Scissors</h1>
+    <script src="rps.js"></script>
 
     <div class="game">
-        <a href="#" onclick="playGame('rock')">Rock</a>
-        <a href="#" onclick="playGame('paper')">Paper</a>
-        <a href="#" onclick="playGame('scissors')">Scissors</a>
-
-
-
-
+        <a href="#" onclick="getInput()">Play Game</a>
 
     </div>
 </body>
